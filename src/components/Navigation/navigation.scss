@@ -1,0 +1,42 @@
+.navigation {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.navigation .menu-btn {
+    display: none;
+}
+
+.navigation .logo-nav {
+    font-size: 30px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.navigation .logo-nav .logo-span {
+    color: cornflowerblue;
+}
+
+.navigation .nav-links {
+    color: black;
+    font-size: 16px;
+}
+
+.navigation .nav-links .link {
+    margin: 0 25px;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navigation .nav-links .link-active {
+    border-bottom: 2px cornflowerblue solid;
+    color: cornflowerblue;
+}

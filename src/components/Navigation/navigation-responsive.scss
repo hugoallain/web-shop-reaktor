@@ -1,0 +1,132 @@
+@import "../Common/common.scss";
+
+/* MOBILE AND TABLET VIEW */
+@media only screen and (max-width: $tablet-landscape) {
+    body.fixed {
+        position: fixed;
+    }
+
+    .navigation {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        background-color: white;
+        font-weight: 600;
+        text-align: start;
+
+        .menu-btn {
+            position: relative;
+            left: 24%;
+            display: flex;
+            width: 75%;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn-burger {
+            position: absolute;
+            right: 2%;
+            width: 30px;
+            height: 3px;
+            border: 5px;
+            background: black;
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn:focus,
+        .menu-btn-burger:focus {
+            outline: none !important; /* stylelint-disable-line declaration-no-important */
+        }
+
+        .menu-btn-burger::before,
+        .menu-btn-burger::after {
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            border: 5px;
+            background: black;
+            content: '';
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-btn-burger::before {
+            transform: translateY(-8px);
+        }
+
+        .menu-btn-burger::after {
+            transform: translateY(8px);
+        }
+
+        .menu-btn.open {
+            .menu-btn-burger {
+                background: transparent;
+                box-shadow: none;
+                transform: translateX(-50px);
+            }
+
+            .menu-btn-burger::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+
+            .menu-btn-burger::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+        }
+
+        .logo-nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            margin: 8px;
+            font-size: $default-size * 2;
+            pointer-events: none;
+
+            .logo-span {
+                color: cornflowerblue;
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        &.open {
+            position: fixed;
+            z-index: 2;
+            overflow: auto;
+            height: 100%;
+            transition: none;
+
+            .nav-links {
+                display: flex;
+                height: 75%;
+                flex-direction: column;
+                justify-content: space-around;
+                color: black;
+                font-size: $default-size * 1.5;
+
+                .link {
+                    margin: 0 25px;
+                    color: inherit;
+                    text-align: center;
+                    text-decoration: none;
+                }
+
+                .link-active {
+                    border-bottom: none;
+                    color: cornflowerblue;
+                }
+            }
+        }
+    }
+}

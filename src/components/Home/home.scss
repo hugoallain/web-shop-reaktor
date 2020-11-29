@@ -1,0 +1,55 @@
+.content-container {
+    display: flex;
+    min-height: 75vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-container {
+    width: 30%;
+}
+
+.title {
+    margin-bottom: 30px;
+    color: cornflowerblue;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: .9em;
+}
+
+.text {
+    font-weight: 500;
+    line-height: 1.8em;
+}
+
+.text-container button {
+    width: 150px;
+    padding: 10px 0;
+    border: none;
+    margin-top: 30px;
+    background-color: cornflowerblue;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    transition: transform ease .5s;
+}
+
+.text-container button:hover {
+    transform: scale(1.1);
+}
+
+.picture {
+    display: flex;
+    max-width: 70%;
+    height: auto;
+    justify-content: center;
+}
+
+.picture img {
+    width: 90%;
+    height: 90%;
+}
